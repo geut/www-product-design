@@ -1,0 +1,19 @@
+{
+  "name": "www-product-design",
+  "version": "1.0.0",
+  "description": "A nextein starter kit",
+  "private": true,
+  "scripts": {
+    "dev": "nextein",
+    "export": "nextein build && nextein export",
+    "now-build": "npm run export"
+  },
+  "keywords": [],
+  "dependencies": {
+    "elems": "^1.0.0-beta.7",
+    "next": "^9.5.4",
+    "nextein": "^2.7.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
