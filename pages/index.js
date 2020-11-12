@@ -1,84 +1,47 @@
-import React, { Component } from 'react'
-import withPosts from 'nextein/posts'
-import { Content } from 'nextein/post'
-import Link from 'nextein/link'
+import React, { Component, Fragment } from "react";
 
-import { Heading1, Anchor } from 'elems';
-import renderers from 'elems/renderers'
-
-
-import { name, authors } from '../site'
-import Layout from '../components/layout'
+import { name, url, description } from "../site.json";
+import Meta from "../components/meta";
+import Navigation from "../components/navigation";
+import Hero from "../components/hero";
+import Intro from "../components/intro";
+//import Contributors from "../components/contributors";
+import Sponsors from "../components/sponsors";
+import Footer from "../components/footer";
 
 class Index extends Component {
-
   render() {
-    const { posts } = this.props
+    const { posts } = this.props;
+
+    //const snippets = posts.filter(inCategory("snippets"));
+
     return (
-      <Layout title={name}>
-        <header>
-          <Heading1>{name}</Heading1>
-        </header>
-        <section>
-          {posts.map(post => {
-            const author = authors[post.data.author]
-            const source = authors[post.data.source]
-            return (
-              <article key={post.data.url}>
-                <header>
-                  <h1>
-                    <Link {...post} passHref><Anchor>{post.data.title}</Anchor></Link>
-                  </h1>
-                  <p>
-                    {author && `Written by ${author.name}`}
-                    {author && source && ` ${String.fromCharCode(183)} `}
-                    {source && `From ${source.name}`}
-                  </p>
-                </header>
-                <Content {...post} excerpt renderers={renderers}/>
-              </article>
-            )
-          })}
-        </section>
-        <style jsx>{`
-          header {
-            margin-top: calc(var(--spacing) * 4);
-            margin-bottom: calc(var(--spacing) * 8);
-          }
+      <Fragment>
+        <Meta title={name} url={url} description={description} />
+        <div className="container">
+          <header>
+            <Navigation />
+            <Hero />
+          </header>
+          <Intro snippets={[]} />
 
-          section {
-            margin: calc(var(--spacing) * 5) 0;
-          }
-          
-          article {
-            margin-bottom: calc(var(--spacing) * 5);
-          }
-
-          article header {
-            margin-top: calc(var(--spacing) * 2);
-            margin-bottom: calc(var(--spacing) * 1);
-          }
-
-          article header h1 {
-            font-family: var(--font-family-heading);
-            font-size: 1.5rem;
-            margin: 0;
-          }
-
-          article header h1 :global(a) {
-            text-decoration: none;
-          }
-          
-          article header p {
-            line-height: calc(24/12);
-            font-size: .75rem; // 12px;
-            color: var(--grey600);
-            margin: 0;
-          }
-        `}</style>
-      </Layout>
-    )
+          <Sponsors />
+          <Footer gutter />
+          <style jsx>{`
+            .container {
+              --main-color: var(--geut500);
+              --main-contrast-color: var(--grey100);
+              background: radial-gradient(
+                ellipse at 50% 0%,
+                var(--geut-blue),
+                var(--geut-purple)
+              );
+            }
+          `}</style>
+        </div>
+      </Fragment>
+    );
   }
 }
 
-export default withPosts(Index)
+export default Index;

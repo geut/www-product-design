@@ -1,7 +1,7 @@
 {
   "name": "www-product-design",
   "version": "1.0.0",
-  "description": "A nextein starter kit",
+  "description": "GEUT's Products Baseline",
   "private": true,
   "scripts": {
     "dev": "nextein",
