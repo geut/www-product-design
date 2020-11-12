@@ -1,6 +1,4 @@
-# Nextein elems Starter
-
-This is an starter skeleton for [Nextein](https://nextein.elmasse.io) sites.
+# GEUT Baseline Product
 
 # Development
 
@@ -29,10 +27,10 @@ Use the deploy button to create a Vercel Project
 
 [![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/elmasse/nextein-elems-starter/tree/master)
 
-
 # More information
 
-- Check the [nextein repository](https://github.com/elmasse/nextein)
-- [Documentation](https://nextein.elmasse.io/docs) 
-- [Guides](https://nextein.elmasse.io/guides)
+Built with [Nextein](https://nextein.elmasse.io).
 
+- Check the [nextein repository](https://github.com/elmasse/nextein)
+- [Documentation](https://nextein.elmasse.io/docs)
+- [Guides](https://nextein.elmasse.io/guides)
