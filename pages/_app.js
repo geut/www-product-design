@@ -54,6 +54,7 @@ export default class App extends NextApp {
             --geut-violet: #4f5186;
 
             --main-color: var(--grey700);
+            --secondary-color: #a6c8dd;
             --main-contrast-color: var(--grey200);
             --action-color: var(--geut-green);
 
