@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nextein",
     "export": "nextein build && nextein export",
-    "now-build": "npm run export"
+    "vercel-build": "npm run export"
   },
   "keywords": [],
   "dependencies": {
