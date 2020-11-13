@@ -26,7 +26,7 @@ export default class Header extends Component {
           <h1 className="title-compact">{title}</h1>
           <Paragraph>{description}</Paragraph>
           <div className="actions rows">
-            <Link href="/guides">
+            <Link href="/usage">
               <Button variant="highlight">
                 <a>
                   <b>Usage</b>
