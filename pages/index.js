@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import withPosts from "nextein/posts";
 
 import { name, url, description, npm_name, repo_url } from "../site.json";
 import Meta from "../components/meta";
@@ -49,4 +50,4 @@ class Index extends Component {
   }
 }
 
-export default Index;
+export default withPosts(Index);
