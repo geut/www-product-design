@@ -7,17 +7,26 @@ import renderers from "elems/renderers";
 import Section from "./section";
 //import Window from "./windows/window";
 import { Button } from "./button";
+// import { PRODUCT_LOGO } from "./icons/logo";
 
 const byOrderSorter = (a, b) => a.data.order - b.data.order;
 
 export default class Intro extends Component {
   render() {
-    const { snippets = [], PRODUCT_LOGO = "product logo" } = this.props;
+    const {
+      snippets = [],
+      PRODUCT_LOGO = "product logo",
+      title,
+      url,
+      type = "website",
+      description,
+    } = this.props;
+
     snippets.sort(byOrderSorter);
     return (
       <Section title="About">
         <div className="container">
-          <Paragraph>YOUR PRODUCT DESCRIPTION</Paragraph>
+          <Paragraph>{description}</Paragraph>
           <div className="rows examples">{PRODUCT_LOGO}</div>
           <Paragraph>
             Get started right now with our Guides or check the Starter Kit.

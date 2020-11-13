@@ -2,6 +2,8 @@
   "name": "GEUT Product Baseline",
   "description": "Your product in a few words",
   "url": "product.geutstudio.com",
+  "npm_name": "www-product-design",
+  "repo_url": "https://github.com/geut/www-product-design/",
   "authors": {
     "GEUT": {
       "name": "GEUT",

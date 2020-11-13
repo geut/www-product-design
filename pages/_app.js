@@ -48,10 +48,12 @@ export default class App extends NextApp {
             --grey700: #424242;
             --grey800: #212121;
             --grey900: #181818;
+
             --geut-blue: rgb(76, 145, 188);
             --geut-green: #55b894;
             --geut-purple: rgb(83, 92, 156);
             --geut-violet: #4f5186;
+            --geut-main-color: rgb(105, 205, 255);
 
             --main-color: var(--grey700);
             --secondary-color: rgb(204, 245, 255);

@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 
-import { name, url, description } from "../site.json";
+import { name, url, description, npm_name, repo_url } from "../site.json";
 import Meta from "../components/meta";
 import Navigation from "../components/navigation";
 import Hero from "../components/hero";
@@ -21,7 +21,12 @@ class Index extends Component {
         <div className="container">
           <header>
             <Navigation />
-            <Hero />
+            <Hero
+              title={name}
+              description={description}
+              npm_name={npm_name}
+              repo_url={repo_url}
+            />
           </header>
           <Intro snippets={[]} />
 
@@ -29,7 +34,7 @@ class Index extends Component {
           <Footer gutter />
           <style jsx>{`
             .container {
-              --main-color: var(--geut500);
+              --main-color: var(--geut-main-color);
               --main-contrast-color: var(--grey100);
               background: radial-gradient(
                 ellipse at 50% 0%,

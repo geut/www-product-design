@@ -7,12 +7,24 @@ import Window from "./windows/window";
 
 export default class Header extends Component {
   render() {
+    const {
+      snippets = [],
+      title,
+      npm_name,
+      url,
+      type = "website",
+      description,
+      repo_url,
+    } = this.props;
+
+    const cmd = `npm install ${npm_name}`;
+
     return (
       <div className="container rows">
         <div className="title row">
           <h1>Hello, I'm</h1>
-          <h1>YOUR PRODUCT.</h1>
-          <Paragraph>YOUR PRODUCT DESCRIPTION</Paragraph>
+          <h1 className="title-compact">{title}</h1>
+          <Paragraph>{description}</Paragraph>
           <div className="actions rows">
             <Link href="/guides">
               <Button variant="highlight">
@@ -21,7 +33,7 @@ export default class Header extends Component {
                 </a>
               </Button>
             </Link>
-            <Link href="/docs">
+            <Link href={repo_url}>
               <Button raised>
                 <a>
                   <b>Code</b>
@@ -31,7 +43,7 @@ export default class Header extends Component {
           </div>
         </div>
         <div className="terminal row">
-          <Window type="zsh" cmd="npm install YOUR_PRODUCT" />
+          <Window type="zsh" cmd={cmd} />
         </div>
         <style jsx>{`
           .container {
@@ -48,6 +60,11 @@ export default class Header extends Component {
             align-items: self-start;
             justify-content: center;
             padding: 0 calc(var(--spacing) * 8);
+          }
+
+          .title-compact {
+            margin-top: calc(var(--spacing));
+            line-height: 1.1;
           }
 
           h1:first-child {
