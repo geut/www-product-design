@@ -26,6 +26,8 @@ export default class Section extends Component {
           }
 
           .title :global(h3) {
+            font-family: var(--font-family-geut);
+            font-weight: lighter;
             margin: calc(var(--spacing) * 4) 0;
             color: var(--secondary-color);
           }
