@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { Heading3 } from 'elems'
+import { Heading2 } from 'elems'
 
 export default class Section extends Component {
   render () {
@@ -9,7 +9,7 @@ export default class Section extends Component {
       <div className='container'>
         <div className='separator' />
         <div className='title'>
-          <Heading3>{title}</Heading3>
+          <Heading2>{title}</Heading2>
         </div>
         {children}
         <style jsx>{`
@@ -25,7 +25,7 @@ export default class Section extends Component {
             background-color: var(--main-color);
           }
 
-          .title :global(h3) {
+          .title :global(h2) {
             font-family: var(--font-family-geut);
             font-weight: lighter;
             margin: calc(var(--spacing) * 4) 0;
