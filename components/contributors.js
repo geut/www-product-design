@@ -1,42 +1,42 @@
-import React, { Component } from "react";
-import Link from "next/link";
+import React, { Component } from 'react'
+import Link from 'next/link'
 
-import { Paragraph } from "elems";
+import { Paragraph } from 'elems'
 
-import Section from "./section";
-import { Button } from "./button";
+import Section from './section'
+import { Button } from './button'
 
 export default class Contributors extends Component {
-  render() {
+  render () {
     const {
       contributors: {
-        data: { contributors = [] },
-      },
-    } = this.props;
+        data: { contributors = [] }
+      }
+    } = this.props
 
     return (
-      <Section title="Contributors">
-        <div className="rows container">
-          <div className="row description columns">
+      <Section title='Contributors'>
+        <div className='rows container'>
+          <div className='row description columns'>
             <Paragraph>
               This project exists thanks to all the people who contribute.
             </Paragraph>
-            <div className="actions">
-              <Link href="https://github.com/elmasse/nextein" prefetch={false}>
+            <div className='actions'>
+              <Link href='https://github.com/elmasse/nextein' prefetch={false}>
                 <Button raised>
-                  <a target="_blank" rel="noopener noreferrer">
+                  <a target='_blank' rel='noopener noreferrer'>
                     <b>Become a Contributor!</b>
                   </a>
                 </Button>
               </Link>
             </div>
           </div>
-          <div className="row contributors rows">
+          <div className='row contributors rows'>
             {contributors.map(({ login, avatar_url, html_url }) => (
-              <div className="row columns contributor" key={login}>
+              <div className='row columns contributor' key={login}>
                 <Link href={html_url} prefetch={false}>
-                  <a target="_blank" rel="noopener noreferrer" title={login}>
-                    <div className="avatar">
+                  <a target='_blank' rel='noopener noreferrer' title={login}>
+                    <div className='avatar'>
                       <img src={avatar_url} />
                     </div>
                   </a>
@@ -99,6 +99,6 @@ export default class Contributors extends Component {
           }
         `}</style>
       </Section>
-    );
+    )
   }
 }

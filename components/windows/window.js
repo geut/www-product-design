@@ -1,26 +1,26 @@
-import React, { Component } from "react";
-import { Bash, Fish } from "./terminal";
-import { Browser } from "./browser";
+import React, { Component } from 'react'
+import { Bash, Fish } from './terminal'
+import { Browser } from './browser'
 
 const TYPES = {
   bash: Bash,
   zsh: Fish,
-  browser: Browser,
-};
+  browser: Browser
+}
 
 export default class Window extends Component {
-  render() {
-    const { title, type, children, className = "", ...rest } = this.props;
-    const Type = TYPES[type] || ((props) => props.children);
+  render () {
+    const { title, type, children, className = '', ...rest } = this.props
+    const Type = TYPES[type] || (props => props.children)
     return (
-      <div className={["window"].concat(className).join(" ")}>
-        <div className="toolbar">
-          <i className="close" />
-          <i className="minimize" />
-          <i className="maximize" />
-          <div className="title">{title || type}</div>
+      <div className={['window'].concat(className).join(' ')}>
+        <div className='toolbar'>
+          <i className='close' />
+          <i className='minimize' />
+          <i className='maximize' />
+          <div className='title'>{title || type}</div>
         </div>
-        <div className="body">
+        <div className='body'>
           <Type {...rest}>{children}</Type>
         </div>
         <style jsx>{`
@@ -28,7 +28,9 @@ export default class Window extends Component {
             display: flex;
             flex-direction: column;
             border-radius: 5px;
-            background-color: var(--grey ${type === "browser" ? "100" : "800"});
+            background-color: var(
+              ${type === 'browser' ? '--grey100' : '--grey800'}
+            );
             padding: 8px;
             border-radius: 8px;
             border: 1px solid #333;
@@ -68,7 +70,7 @@ export default class Window extends Component {
             text-align: center;
             line-height: 1;
             font-size: 0.9em;
-            color: var(--grey ${type === "browser" ? "800" : "100"});
+            color: var(--grey ${type === 'browser' ? '800' : '100'});
           }
           .body {
             flex: 1;
@@ -76,11 +78,11 @@ export default class Window extends Component {
           }
           .body
             :global(:not(pre)
-              > code[class*="language-"], pre[class*="language-"]) {
+              > code[class*='language-'], pre[class*='language-']) {
             background: var(--grey800);
           }
         `}</style>
       </div>
-    );
+    )
   }
 }

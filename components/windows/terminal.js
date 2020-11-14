@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
 class TTY extends Component {
-  render() {
-    const { className, children } = this.props;
+  render () {
+    const { className, children } = this.props
     return (
-      <div className={["tty"].concat(className).join(" ")}>
+      <div className={['tty'].concat(className).join(' ')}>
         {children}
         <style jsx>{`
           .tty {
@@ -15,38 +15,38 @@ class TTY extends Component {
           }
         `}</style>
       </div>
-    );
+    )
   }
 }
 
 export class Bash extends Component {
-  render() {
-    const { cmd, children } = this.props;
+  render () {
+    const { cmd, children } = this.props
     return (
-      <TTY className="bash">
+      <TTY className='bash'>
         {cmd ? <span>{cmd}</span> : null}
         {children}
         <style jsx>{`
           span::before {
-            content: "$";
+            content: '$';
             padding-right: 8px;
           }
         `}</style>
       </TTY>
-    );
+    )
   }
 }
 
 export class Fish extends Component {
-  getCommandLine = (line = "") => {
+  getCommandLine = (line = '') => {
     return (
       <React.Fragment>
-        {line.split(" ").map((part, i) => {
+        {line.split(' ').map((part, i) => {
           return (
-            <span key={i} className={i === 0 ? "command" : "argument"}>
-              {part}{" "}
+            <span key={i} className={i === 0 ? 'command' : 'argument'}>
+              {part}{' '}
             </span>
-          );
+          )
         })}
         <style jsx>{`
           .command {
@@ -58,23 +58,23 @@ export class Fish extends Component {
           }
         `}</style>
       </React.Fragment>
-    );
-  };
+    )
+  }
 
-  render() {
-    const { cmd, children } = this.props;
+  render () {
+    const { cmd, children } = this.props
     return (
-      <TTY className="fish">
+      <TTY className='fish'>
         {this.getCommandLine(cmd)}
         {children}
         <style jsx>{`
           :global(.fish::before) {
-            content: "~";
+            content: '~';
             color: rgb(15, 214, 214);
             padding-right: 8px;
           }
         `}</style>
       </TTY>
-    );
+    )
   }
 }

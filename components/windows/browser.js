@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
 export class Browser extends Component {
-  render() {
-    const { className, children } = this.props;
+  render () {
+    const { className, children } = this.props
     return (
-      <div className={["browser"].concat(className).join(" ")}>
+      <div className={['browser'].concat(className).join(' ')}>
         {children}
         <style jsx>{`
           .browser {
@@ -17,6 +17,6 @@ export class Browser extends Component {
           }
         `}</style>
       </div>
-    );
+    )
   }
 }

@@ -1,47 +1,47 @@
-import React, { Component } from "react";
-import Link from "nextein/link";
+import React, { Component } from 'react'
+import Link from 'nextein/link'
 
-import { Anchor } from "elems";
+import { Anchor } from 'elems'
 
-import Github from "./icons/github";
-import Npm from "./icons/npm";
-import Twitter from "./icons/twitter";
+import Github from './icons/github'
+import Npm from './icons/npm'
+import Twitter from './icons/twitter'
 
 export default class Footer extends Component {
-  render() {
-    const { children, gutter = false } = this.props;
+  render () {
+    const { children, gutter = false } = this.props
     return (
-      <footer className="columns">
+      <footer className='columns'>
         {children}
-        <div className="info rows">
+        <div className='info rows'>
           <div>
-            <div className="brand">YOUR PRODUCT LOGO</div>
-            <div className="copyright">
+            <div className='brand'>YOUR PRODUCT LOGO</div>
+            <div className='copyright'>
               Copyright &copy; 2020 - {new Date().getFullYear()} GEUT
             </div>
           </div>
-          <div className="social rows">
-            <Link href="https://twitter.com/geutstudio">
-              <a target="_blank" rel="noopener noreferrer">
-                <Twitter width="19" alt="Twitter" />
+          <div className='social rows'>
+            <Link href='https://twitter.com/geutstudio'>
+              <a target='_blank' rel='noopener noreferrer'>
+                <Twitter width='19' alt='Twitter' />
               </a>
             </Link>
-            <Link href="https://www.npmjs.com/package/GEUT_PRODUCT">
-              <a target="_blank" rel="noopener noreferrer">
-                <Npm width="35" style={{ marginTop: "5px" }} alt="npm" />
+            <Link href='https://www.npmjs.com/package/GEUT_PRODUCT'>
+              <a target='_blank' rel='noopener noreferrer'>
+                <Npm width='35' style={{ marginTop: '5px' }} alt='npm' />
               </a>
             </Link>
           </div>
         </div>
-        <div className="built">
-          Built with <span>♥︎</span> by{" "}
-          <Anchor href="https://github.com/geut/your_product">
+        <div className='built'>
+          Built with <span>♥︎</span> by{' '}
+          <Anchor href='https://github.com/geut/your_product'>
             /<span>GEUT</span>
           </Anchor>
         </div>
         <style jsx>{`
           footer {
-            ${gutter ? `padding: 0 calc(var(--spacing) * 4);` : ""}
+            ${gutter ? `padding: 0 calc(var(--spacing) * 4);` : ''}
             padding-top: calc(var(--spacing) * 6);
             min-height: 30vh;
             color: var(--main-color);
@@ -87,6 +87,6 @@ export default class Footer extends Component {
           }
         `}</style>
       </footer>
-    );
+    )
   }
 }

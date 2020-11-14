@@ -1,20 +1,20 @@
-import React, { Fragment } from "react";
-import NextApp from "next/app";
-import { CssBaseline } from "elems";
+import React, { Fragment } from 'react'
+import NextApp from 'next/app'
+import { CssBaseline } from 'elems'
 
-// import "prismjs/themes/prism-tomorrow.css";
+import 'prismjs/themes/prism-tomorrow.css'
 
 export default class App extends NextApp {
-  render() {
-    const { Component, pageProps } = this.props;
+  render () {
+    const { Component, pageProps } = this.props
 
     return (
       <Fragment>
         <CssBaseline />
         <style jsx global>{`
           :root {
-            --font-family-heading: "Open Sans";
-            --font-family-body: "Lato";
+            --font-family-heading: 'Open Sans';
+            --font-family-body: 'Lato';
 
             --spacing: 8px;
 
@@ -49,10 +49,13 @@ export default class App extends NextApp {
             --grey800: #212121;
             --grey900: #181818;
 
-            --geut-blue: rgb(76, 145, 188);
-            --geut-green: #55b894;
-            --geut-purple: rgb(83, 92, 156);
-            --geut-violet: #4f5186;
+            --geut-black: #0d0d0d;
+            --geut-blue: #4e9fbf;
+            --geut-green: #5abf9a;
+            --geut-green-light: #5abf69;
+            --geut-green-dark: #2c733d;
+            --geut-purple: #5864a6;
+            --geut-purple-dark: #363f73;
             --geut-main-color: rgb(105, 205, 255);
 
             --main-color: var(--grey700);
@@ -78,7 +81,7 @@ export default class App extends NextApp {
 
           body {
             font-family: var(--font-family-body), -apple-system,
-              BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", sans-serif;
+              BlinkMacSystemFont, 'Helvetica Neue', 'Lucida Grande', sans-serif;
             font-size: var(--font-base);
           }
 
@@ -101,6 +104,6 @@ export default class App extends NextApp {
         `}</style>
         <Component {...pageProps} />
       </Fragment>
-    );
+    )
   }
 }

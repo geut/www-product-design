@@ -1,15 +1,14 @@
-import React from "react";
+import React from 'react'
 
 export const Button = React.forwardRef(
-  ({ children, variant = "normal", raised = false, ...props }, ref) => {
+  ({ children, variant = 'normal', raised = false, ...props }, ref) => {
     return (
-      <button type="text" {...props} ref={ref}>
+      <button type='text' {...props} ref={ref}>
         {children}
         <style jsx>{`
         button {
-          ${
-            (variant === "normal" &&
-              `
+          ${(variant === 'normal' &&
+            `
             --button-bg-color: var(--main-contrast-color);
             --button-border-color: var(--main-contrast-color);
             --button-color: var(--main-color);
@@ -17,24 +16,19 @@ export const Button = React.forwardRef(
             --button--hover-border-color: var(--main-color);
             --button--hover-color: var(--main--contrast-color);
           `) ||
-            ""
-          }
-          ${
-            (variant === "highlight" &&
-              `
+            ''}
+          ${(variant === 'highlight' &&
+            `
             --button-bg-color: var(--action-color);
             --button-border-color: var(--action-color);
             --button-color: var(--grey50);
           `) ||
-            ""
-          }
-          ${
-            (raised &&
-              `
+            ''}
+          ${(raised &&
+            `
             box-shadow: 0 5px 10px rgba(0,0,0,.16);
           `) ||
-            ""
-          }
+            ''}
 
 
           display: flex;
@@ -69,9 +63,8 @@ export const Button = React.forwardRef(
         }
 
         button:hover {
-          ${
-            ((variant === "highlight" || raised) &&
-              `
+          ${((variant === 'highlight' || raised) &&
+            `
           box-shadow: 0 7px 20px rgba(0,0,0,.32);
           transform: translateY(-1px);
           `) ||
@@ -79,10 +72,9 @@ export const Button = React.forwardRef(
           background-color: var(--button--hover-bg-color);
           border: 1px solid var(--button--hover-border-color);          
           color: var(--button--hover-color);
-          `
-          }
+          `}
       `}</style>
       </button>
-    );
+    )
   }
-);
+)

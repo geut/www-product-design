@@ -1,47 +1,47 @@
-import React, { Component } from "react";
-import { Paragraph } from "elems";
-import Content from "nextein/content";
-import Link from "nextein/link";
-import renderers from "elems/renderers";
+import React, { Component } from 'react'
+import { Paragraph } from 'elems'
+import Content from 'nextein/content'
+import Link from 'nextein/link'
+import renderers from 'elems/renderers'
 
-import Section from "./section";
+import Section from './section'
 //import Window from "./windows/window";
-import { Button } from "./button";
+import { Button } from './button'
 // import { PRODUCT_LOGO } from "./icons/logo";
 
-const byOrderSorter = (a, b) => a.data.order - b.data.order;
+const byOrderSorter = (a, b) => a.data.order - b.data.order
 
 export default class Intro extends Component {
-  render() {
+  render () {
     const {
       snippets = [],
-      PRODUCT_LOGO = "product logo",
+      PRODUCT_LOGO = 'product logo',
       title,
       url,
-      type = "website",
-      description,
-    } = this.props;
+      type = 'website',
+      description
+    } = this.props
 
-    snippets.sort(byOrderSorter);
+    snippets.sort(byOrderSorter)
     return (
-      <Section title="About">
-        <div className="container">
+      <Section title='About'>
+        <div className='container'>
           <Paragraph>{description}</Paragraph>
-          <div className="rows examples">{PRODUCT_LOGO}</div>
+          <div className='rows examples'>{PRODUCT_LOGO}</div>
           <Paragraph>
             Get started right now with our Guides or check the Starter Kit.
           </Paragraph>
-          <div className="actions rows">
-            <Link href="/guides">
-              <Button variant="highlight">
-                <a target="_blank" rel="noopener noreferrer">
+          <div className='actions rows'>
+            <Link href='/guides'>
+              <Button variant='highlight'>
+                <a target='_blank' rel='noopener noreferrer'>
                   <b>Button 1!</b>
                 </a>
               </Button>
             </Link>
-            <Link href="https://github.com/elmasse/nextein-starter" passHref>
+            <Link href='https://github.com/elmasse/nextein-starter' passHref>
               <Button raised>
-                <a target="_blank" rel="noopener noreferrer">
+                <a target='_blank' rel='noopener noreferrer'>
                   <b>Action 2</b>
                 </a>
               </Button>
@@ -109,6 +109,6 @@ export default class Intro extends Component {
           }
         `}</style>
       </Section>
-    );
+    )
   }
 }

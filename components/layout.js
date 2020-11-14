@@ -3,24 +3,36 @@ import Head from 'next/head'
 import Link from 'nextein/link'
 import { Paragraph, Anchor } from 'elems'
 
-import { name } from '../site';
+import { name } from '../site'
 
-export default function Layout({ title, showNav = false, children }) {
+export default function Layout ({
+  title,
+  showNav = false,
+  children,
+  docsStyle = false
+}) {
+  const rootStyle = `root`
   return (
-    <div className="root">
+    <div className={rootStyle}>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>{title}</title>
       </Head>
       <main>
-        {showNav && (<nav><Link href="/" passHref><Anchor>{name}</Anchor></Link></nav>)}
+        {showNav && (
+          <nav>
+            <Link href='/' passHref>
+              <Anchor>{name}</Anchor>
+            </Link>
+          </nav>
+        )}
         {children}
       </main>
       <footer>
         <Paragraph>
           &copy; {new Date().getFullYear()} - Built with ♥︎ and
           {` `}
-          <Anchor href="https://nextein.elmasse.io">Nextein</Anchor>
+          <Anchor href='https://nextein.elmasse.io'>Nextein</Anchor>
         </Paragraph>
       </footer>
       <style jsx>{`
@@ -43,6 +55,6 @@ export default function Layout({ title, showNav = false, children }) {
           padding-top: calc(var(--spacing) * 8);
         }
       `}</style>
-  </div>
+    </div>
   )
 }

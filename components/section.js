@@ -1,14 +1,14 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
-import { Heading3 } from "elems";
+import { Heading3 } from 'elems'
 
 export default class Section extends Component {
-  render() {
-    const { title, children } = this.props;
+  render () {
+    const { title, children } = this.props
     return (
-      <div className="container">
-        <div className="separator" />
-        <div className="title">
+      <div className='container'>
+        <div className='separator' />
+        <div className='title'>
           <Heading3>{title}</Heading3>
         </div>
         {children}
@@ -31,6 +31,6 @@ export default class Section extends Component {
           }
         `}</style>
       </div>
-    );
+    )
   }
 }

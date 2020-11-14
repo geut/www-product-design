@@ -1,33 +1,33 @@
-import React, { Component } from "react";
-import Link from "nextein/link";
-import { Paragraph } from "elems";
+import React, { Component } from 'react'
+import Link from 'nextein/link'
+import { Paragraph } from 'elems'
 
-import { Button } from "./button";
-import Window from "./windows/window";
+import { Button } from './button'
+import Window from './windows/window'
 
 export default class Header extends Component {
-  render() {
+  render () {
     const {
       snippets = [],
       title,
       npm_name,
       url,
-      type = "website",
+      type = 'website',
       description,
-      repo_url,
-    } = this.props;
+      repo_url
+    } = this.props
 
-    const cmd = `npm install ${npm_name}`;
+    const cmd = `npm install ${npm_name}`
 
     return (
-      <div className="container rows">
-        <div className="title row">
+      <div className='container rows'>
+        <div className='title row'>
           <h1>Hello, I'm</h1>
-          <h1 className="title-compact">{title}</h1>
+          <h1 className='title-compact'>{title}</h1>
           <Paragraph>{description}</Paragraph>
-          <div className="actions rows">
-            <Link href="/usage">
-              <Button variant="highlight">
+          <div className='actions rows'>
+            <Link href='/usage'>
+              <Button variant='highlight'>
                 <a>
                   <b>Usage</b>
                 </a>
@@ -42,8 +42,8 @@ export default class Header extends Component {
             </Link>
           </div>
         </div>
-        <div className="terminal row">
-          <Window type="zsh" cmd={cmd} />
+        <div className='terminal row'>
+          <Window type='zsh' cmd={cmd} />
         </div>
         <style jsx>{`
           .container {
@@ -144,6 +144,6 @@ export default class Header extends Component {
           }
         `}</style>
       </div>
-    );
+    )
   }
 }
