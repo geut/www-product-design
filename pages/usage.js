@@ -68,7 +68,7 @@ export default withPost(({ post }) => {
 
           header :global(h1) {
             font-family: var(--font-family-geut);
-            color: var(--geut-blue);
+            color: var(--secondary-color);
           }
 
           .noMargin {
