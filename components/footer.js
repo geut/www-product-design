@@ -51,12 +51,12 @@ export default class Footer extends Component {
             ${gutter ? `padding: 0 calc(var(--spacing) * 4);` : ''}
             padding-top: calc(var(--spacing) * 6);
             min-height: 30vh;
-            color: var(--main-color);
+            color: var(--grey400);
             justify-content: flex-end;
           }
 
           footer :global(svg) {
-            fill: var(--main-color);
+            fill: var(--grey400);
             margin: 0 var(--spacing);
           }
 

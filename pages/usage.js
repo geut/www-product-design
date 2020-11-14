@@ -62,7 +62,7 @@ export default withPost(({ post }) => {
             font-family: var(--font-family-heading);
             font-size: 2em;
             text-transform: uppercase;
-            color: var(--grey600);
+            color: var(--main-color);
             margin-bottom: calc(var(--spacing) * -4);
           }
 
@@ -77,7 +77,6 @@ export default withPost(({ post }) => {
           }
 
           .container {
-            --main-color: var(--grey50);
             --main-contrast-color: var(--geut-main-color);
             background: radial-gradient(
               ellipse at 50% 0%,

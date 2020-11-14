@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import NextApp from 'next/app'
 import { CssBaseline } from 'elems'
 
@@ -9,13 +9,13 @@ export default class App extends NextApp {
     const { Component, pageProps } = this.props
 
     return (
-      <Fragment>
+      <>
         <CssBaseline />
         <style jsx global>{`
           :root {
             --font-family-geut: 'ETH Sans';
             --font-family-heading: 'Open Sans';
-            --font-family-body: 'Lato';
+            --font-family-body: 'Montserrat';
 
             --spacing: 8px;
 
@@ -57,10 +57,10 @@ export default class App extends NextApp {
             --geut-green-dark: #2c733d;
             --geut-purple: #5864a6;
             --geut-purple-dark: #363f73;
-            --geut-main-color: rgb(105, 205, 255);
 
-            --main-color: var(--grey700);
-            --secondary-color: rgb(204, 245, 255);
+            --main-color: var(--grey200);
+            --secondary-color: #ccf5ff;
+
             --main-contrast-color: var(--grey200);
             --action-color: var(--geut-green);
 
@@ -115,7 +115,7 @@ export default class App extends NextApp {
           }
         `}</style>
         <Component {...pageProps} />
-      </Fragment>
+      </>
     )
   }
 }

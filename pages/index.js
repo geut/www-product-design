@@ -37,8 +37,7 @@ class Index extends Component {
           <Footer gutter githubUrl={githubUrl} npmName={npmName} />
           <style jsx>{`
             .container {
-              --main-color: var(--geut-main-color);
-              --main-contrast-color: var(--grey100);
+              --main-contrast-color: var(--geut-main-color);
               background: radial-gradient(
                 ellipse at 50% 0%,
                 var(--geut-blue),

@@ -14,8 +14,7 @@ export default class Header extends Component {
     return (
       <div className='container rows'>
         <div className='title row'>
-          <h1>Hello, I'm</h1>
-          <h1 className='title-compact'>{title}</h1>
+          <h1>{title}</h1>
           <Paragraph>{description}</Paragraph>
           <div className='actions rows'>
             <Link href='/usage'>
@@ -60,8 +59,8 @@ export default class Header extends Component {
           }
 
           h1:first-child {
-            font-weight: 300;
-            color: var(--grey500);
+            font-weight: 600;
+            color: var(--secondary-color);
             letter-spacing: -0.031em;
             margin: 0;
           }
@@ -81,7 +80,7 @@ export default class Header extends Component {
           }
 
           .title :global(p) {
-            --main-color: var(--grey400);
+            --main-color: var(--grey200);
             margin-top: calc(var(--spacing) * 10);
             font-weight: 200;
           }

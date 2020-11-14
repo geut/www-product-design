@@ -70,7 +70,7 @@ export const Button = React.forwardRef(
           `) ||
             `
           background-color: var(--button--hover-bg-color);
-          border: 1px solid var(--button--hover-border-color);          
+          border: 1px solid var(--button--hover-border-color);
           color: var(--button--hover-color);
           `}
       `}</style>

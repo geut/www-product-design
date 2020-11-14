@@ -37,16 +37,17 @@ export default class Navigation extends Component {
             min-height: 4em;
             margin-bottom: calc(var(--spacing) * 2);
             font-family: var(--font-family-heading);
+            color: var(--grey400);
           }
 
           nav > a {
+            color: var(--grey400);
             padding: 0 calc(var(--spacing) * 2);
             font-size: 0.885em;
           }
 
           nav > a,
           nav > a:visited {
-            color: var(--grey500);
             font-weight: 700;
             text-transform: uppercase;
             text-decoration: none;
@@ -57,7 +58,7 @@ export default class Navigation extends Component {
           }
 
           nav > a :global(svg) {
-            fill: var(--grey500);
+            fill: var(--grey400);
           }
 
           nav > a :global(svg:hover) {
