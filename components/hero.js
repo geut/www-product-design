@@ -60,7 +60,6 @@ export default class Header extends Component {
             align-items: self-start;
             justify-content: center;
             padding: 0 calc(var(--spacing) * 8);
-           
           }
 
           .title-compact {
@@ -76,7 +75,6 @@ export default class Header extends Component {
           }
 
           h1 {
-            
             font-family: var(--font-family-geut);
             font-weight: 600;
             font-size: 6em;
@@ -115,8 +113,6 @@ export default class Header extends Component {
             flex: 1;
             padding: 0 calc(var(--spacing) * 8);
           }
-          
-          
 
           @media screen and (max-width: 1024px) {
             .container.rows {

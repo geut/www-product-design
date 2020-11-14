@@ -33,9 +33,7 @@ export default withPost(({ post }) => {
         <div className='main rows'>
           <article>
             <header>
-              <div className='category'>
-                Usage{' '}
-              </div>
+              <div className='category'>Usage </div>
               <Heading1>{post.data.title}</Heading1>
             </header>
 
@@ -65,7 +63,7 @@ export default withPost(({ post }) => {
             align-items: baseline;
             margin: calc(var(--spacing) * 10) 0;
           }
-          
+
           article header .category {
             display: flex;
             font-family: var(--font-family-heading);
@@ -74,7 +72,7 @@ export default withPost(({ post }) => {
             color: var(--grey600);
             margin-bottom: calc(var(--spacing) * -4);
           }
-          
+
           header :global(h1) {
             font-family: var(--font-family-geut);
             color: var(--geut-blue);
@@ -109,8 +107,6 @@ export default withPost(({ post }) => {
             display: flex;
             flex-direction: row;
           }
-
-          
 
           .innerContent :global(h2) {
             color: var(--grey200);

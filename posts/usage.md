@@ -14,6 +14,7 @@ module.exports = withProduct({
   // Your code here
 })
 ```
+
 ---
 
 ## Advanced Usage

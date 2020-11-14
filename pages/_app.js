@@ -13,7 +13,7 @@ export default class App extends NextApp {
         <CssBaseline />
         <style jsx global>{`
           :root {
-            --font-family-geut: "ETH Sans";
+            --font-family-geut: 'ETH Sans';
             --font-family-heading: 'Open Sans';
             --font-family-body: 'Lato';
 
@@ -67,14 +67,14 @@ export default class App extends NextApp {
             font-size: 16px;
           }
           @font-face {
-            font-family: "ETH Sans";
-            src: url("/static/fonts/eth-sans/EthRomainEthon.ttf");
+            font-family: 'ETH Sans';
+            src: url('/static/fonts/eth-sans/EthRomainEthon.ttf');
             font-weight: lighter;
           }
-        
+
           @font-face {
-            font-family: "ETH Sans";
-            src: url("/static/fonts/eth-sans/EthBlackEthon.ttf");
+            font-family: 'ETH Sans';
+            src: url('/static/fonts/eth-sans/EthBlackEthon.ttf');
             font-weight: bold;
           }
 
