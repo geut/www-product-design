@@ -1,34 +1,27 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import withPost, { Content } from 'nextein/post'
 
-import { Heading1, Paragraph, Blockquote } from 'elems'
+import { Heading1 } from 'elems'
 import renderers from 'elems/renderers'
 
 import Navigation from '../components/navigation'
 import Meta from '../components/meta'
 import {
   name,
-  url,
-  authors,
-  description,
-  npm_name,
-  github_url
+  npm_name as npmName,
+  github_url as githubUrl
 } from '../site.json'
 import Footer from '../components/footer'
 
 export default withPost(({ post }) => {
-  const headTitle = `${name} | Examples | ${post.data.title}`
-  const fullUrl = `${url}${post.data.url}`
-
-  const author = authors[post.data.author]
-  const source = authors[post.data.source]
+  const headTitle = `${name} | Usage | ${post.data.title}`
 
   return (
-    <Fragment>
-      <Meta title={post.data.title} />
+    <>
+      <Meta title={headTitle} />
       <div className='container'>
         <header className='noMargin'>
-          <Navigation github_url={github_url} npm_name={npm_name} />
+          <Navigation githubUrl={githubUrl} npmName={npmName} />
         </header>
         <div className='main rows'>
           <article>
@@ -40,7 +33,7 @@ export default withPost(({ post }) => {
             <section className='innerContent'>
               <Content {...post} renderers={renderers} />
             </section>
-            <Footer />
+            <Footer githubUrl={githubUrl} npmName={npmName} />
           </article>
         </div>
         <style jsx>{`
@@ -117,6 +110,6 @@ export default withPost(({ post }) => {
           }
         `}</style>
       </div>
-    </Fragment>
+    </>
   )
 })

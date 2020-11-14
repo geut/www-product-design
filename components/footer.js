@@ -9,7 +9,9 @@ import Twitter from './icons/twitter'
 
 export default class Footer extends Component {
   render () {
-    const { children, gutter = false } = this.props
+    const { children, gutter = false, npmName, githubUrl } = this.props
+    const npmUrl = `https://www.npmjs.com/package/${npmName}`
+
     return (
       <footer className='columns'>
         {children}
@@ -21,21 +23,26 @@ export default class Footer extends Component {
             </div>
           </div>
           <div className='social rows'>
+            <Link href={githubUrl}>
+              <a target='_blank' rel='noopener noreferrer'>
+                <Github width='19' alt='GitHub' />
+              </a>
+            </Link>
+            <Link href={npmUrl}>
+              <a target='_blank' rel='noopener noreferrer'>
+                <Npm width='35' style={{ marginTop: '5px' }} alt='npm' />
+              </a>
+            </Link>
             <Link href='https://twitter.com/geutstudio'>
               <a target='_blank' rel='noopener noreferrer'>
                 <Twitter width='19' alt='Twitter' />
-              </a>
-            </Link>
-            <Link href='https://www.npmjs.com/package/GEUT_PRODUCT'>
-              <a target='_blank' rel='noopener noreferrer'>
-                <Npm width='35' style={{ marginTop: '5px' }} alt='npm' />
               </a>
             </Link>
           </div>
         </div>
         <div className='built'>
           Built with <span>♥︎</span> by{' '}
-          <Anchor href='https://github.com/geut/your_product'>
+          <Anchor href='https://github.com/geut'>
             /<span>GEUT</span>
           </Anchor>
         </div>

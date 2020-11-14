@@ -7,19 +7,19 @@ import Twitter from './icons/twitter'
 
 export default class Navigation extends Component {
   render () {
-    const { github_url, npm_name } = this.props
-    const npm_url = `https://www.npmjs.com/package/${npm_name}`
+    const { githubUrl, npmName } = this.props
+    const npmUrl = `https://www.npmjs.com/package/${npmName}`
     return (
       <nav>
         <Link href='/'>
           <a>YOUR PRODUCT ICON</a>
         </Link>
-        <Link href={github_url}>
+        <Link href={githubUrl}>
           <a target='_blank' rel='noopener noreferrer'>
             <Github width='25' alt='Github' />
           </a>
         </Link>
-        <Link href={npm_url}>
+        <Link href={npmUrl}>
           <a target='_blank' rel='noopener noreferrer'>
             <Npm width='35' style={{ marginTop: '5px' }} alt='npm' />
           </a>

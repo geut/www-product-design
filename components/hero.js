@@ -7,17 +7,9 @@ import Window from './windows/window'
 
 export default class Header extends Component {
   render () {
-    const {
-      snippets = [],
-      title,
-      npm_name,
-      url,
-      type = 'website',
-      description,
-      repo_url
-    } = this.props
+    const { title, npmName, description, githubUrl } = this.props
 
-    const cmd = `npm install ${npm_name}`
+    const cmd = `npm install ${npmName}`
 
     return (
       <div className='container rows'>
@@ -33,7 +25,7 @@ export default class Header extends Component {
                 </a>
               </Button>
             </Link>
-            <Link href={repo_url}>
+            <Link href={githubUrl}>
               <Button raised>
                 <a>
                   <b>Code</b>

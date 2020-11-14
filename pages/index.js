@@ -1,38 +1,40 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import withPosts from 'nextein/posts'
 
-import { name, url, description, npm_name, github_url } from '../site.json'
+import {
+  name,
+  url,
+  description,
+  npm_name as npmName,
+  github_url as githubUrl
+} from '../site.json'
 import Meta from '../components/meta'
 import Navigation from '../components/navigation'
 import Hero from '../components/hero'
 import Intro from '../components/intro'
-//import Contributors from "../components/contributors";
+// import Contributors from "../components/contributors";
 import Sponsors from '../components/sponsors'
 import Footer from '../components/footer'
 
 class Index extends Component {
   render () {
-    const { posts } = this.props
-
-    //const snippets = posts.filter(inCategory("snippets"));
-
     return (
-      <Fragment>
+      <>
         <Meta title={name} url={url} description={description} />
         <div className='container'>
           <header>
-            <Navigation github_url={github_url} npm_name={npm_name} />
+            <Navigation githubUrl={githubUrl} npmName={npmName} />
             <Hero
               title={name}
               description={description}
-              npm_name={npm_name}
-              repo_url={github_url}
+              npmName={npmName}
+              githubUrl={githubUrl}
             />
           </header>
           <Intro snippets={[]} />
 
           <Sponsors />
-          <Footer gutter />
+          <Footer gutter githubUrl={githubUrl} npmName={npmName} />
           <style jsx>{`
             .container {
               --main-color: var(--geut-main-color);
@@ -45,7 +47,7 @@ class Index extends Component {
             }
           `}</style>
         </div>
-      </Fragment>
+      </>
     )
   }
 }
