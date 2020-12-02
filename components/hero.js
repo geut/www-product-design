@@ -38,6 +38,7 @@ export default class Header extends Component {
         </div>
         <style jsx>{`
           .container {
+            padding-top: calc(var(--spacing) * 18);
             min-height: 90vh;
           }
 
