@@ -8,8 +8,8 @@ import Navigation from '../components/navigation'
 import Meta from '../components/meta'
 import {
   name,
-  npm_name as npmName,
-  github_url as githubUrl
+  npmName,
+  github
 } from '../site.json'
 import Footer from '../components/footer'
 
@@ -21,7 +21,7 @@ export default withPost(({ post }) => {
       <Meta title={headTitle} />
       <div className='container'>
         <header className='noMargin'>
-          <Navigation githubUrl={githubUrl} npmName={npmName} />
+          <Navigation github={github} npmName={npmName} />
         </header>
         <div className='main rows'>
           <article>
@@ -33,7 +33,7 @@ export default withPost(({ post }) => {
             <section className='innerContent'>
               <Content {...post} renderers={renderers} />
             </section>
-            <Footer githubUrl={githubUrl} npmName={npmName} />
+            <Footer github={github} npmName={npmName} />
           </article>
         </div>
         <style jsx>{`

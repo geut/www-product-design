@@ -9,33 +9,27 @@ import Twitter from './icons/twitter'
 
 export default class Footer extends Component {
   render () {
-    const { children, gutter = false, npmName, githubUrl } = this.props
-    const npmUrl = `https://www.npmjs.com/package/${npmName}`
+    const { children, gutter = false, npm, github } = this.props
 
     return (
       <footer className='columns'>
         {children}
         <div className='info rows'>
           <div>
-            <div className='brand'>YOUR PRODUCT LOGO</div>
+            <div className='brand'>YOUR LOGO</div>
             <div className='copyright'>
               Copyright &copy; 2020 - {new Date().getFullYear()} GEUT
             </div>
           </div>
           <div className='social rows'>
-            <Link href={githubUrl}>
+            <Link href={github}>
               <a target='_blank' rel='noopener noreferrer'>
                 <Github width='19' alt='GitHub' />
               </a>
             </Link>
-            <Link href={npmUrl}>
+            <Link href={npm}>
               <a target='_blank' rel='noopener noreferrer'>
                 <Npm width='35' style={{ marginTop: '5px' }} alt='npm' />
-              </a>
-            </Link>
-            <Link href='https://twitter.com/geutstudio'>
-              <a target='_blank' rel='noopener noreferrer'>
-                <Twitter width='19' alt='Twitter' />
               </a>
             </Link>
           </div>

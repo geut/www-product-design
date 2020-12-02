@@ -2,12 +2,19 @@
   "name": "GEUT Product Baseline",
   "description": "Your product in a few words",
   "url": "product.geutstudio.com",
-  "npm_name": "www-product-design",
-  "github_url": "https://github.com/geut/www-product-design/",
+  "npm": "https://www.npmjs.com/package/www-product-design",
+  "npmName": "www-product-design",
+  "github": "https://github.com/geut/www-product-design/",
   "authors": {
     "GEUT": {
       "name": "GEUT",
       "twitter": "@geutstudio"
     }
+  },
+  "geut": {
+    "legal": "GEUT SAS",
+    "mail": "contact@geutstudio.com",
+    "github": "https://github.com/geut/",
+    "twitter": "https://twitter.com/geutstudio"
   }
 }

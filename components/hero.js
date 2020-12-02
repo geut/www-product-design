@@ -2,12 +2,14 @@ import React, { Component } from 'react'
 import Link from 'nextein/link'
 import { Paragraph } from 'elems'
 
+import Github from './icons/github'
+import Npm from './icons/npm'
 import { Button } from './button'
 import Window from './windows/window'
 
 export default class Header extends Component {
   render () {
-    const { title, npmName, description, githubUrl } = this.props
+    const { title, npmName, description, github, npm } = this.props
 
     const cmd = `npm install ${npmName}`
 
@@ -16,6 +18,7 @@ export default class Header extends Component {
         <div className='title row'>
           <h1>{title}</h1>
           <Paragraph>{description}</Paragraph>
+
           <div className='actions rows'>
             <Link href='/usage'>
               <Button variant='highlight'>
@@ -24,7 +27,7 @@ export default class Header extends Component {
                 </a>
               </Button>
             </Link>
-            <Link href={githubUrl}>
+            <Link href={github}>
               <Button raised>
                 <a>
                   <b>Code</b>
@@ -32,6 +35,21 @@ export default class Header extends Component {
               </Button>
             </Link>
           </div>
+
+          <div className='productIcons rows'>
+
+            <Link href={github}>
+              <a target='_blank' rel='noopener noreferrer'>
+                <Github width='24' alt='GitHub' />
+              </a>
+            </Link>
+            <Link href={npm}>
+              <a target='_blank' rel='noopener noreferrer'>
+                <Npm width='40' style={{ marginTop: '5px' }} alt='npm' />
+              </a>
+            </Link>
+          </div>
+
         </div>
         <div className='terminal row'>
           <Window type='zsh' cmd={cmd} />
@@ -95,6 +113,17 @@ export default class Header extends Component {
             --button-color: var(--grey900);
             margin: 0 calc(var(--spacing) * 1);
             width: 150px;
+          }
+          
+          .productIcons {
+            align-items: center;
+            min-height: 10vh;
+
+          }
+          
+          .productIcons :global(svg) {
+            fill: var(--grey500);
+            margin: 0 var(--spacing);
           }
 
           .terminal {
