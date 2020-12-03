@@ -56,13 +56,13 @@ export default class App extends NextApp {
             --geut-green-light: #5abf69;
             --geut-green-dark: #2c733d;
             --geut-purple: #5864a6;
-            --geut-purple-dark: #363f73;
+            --geut-purple-dark: #2b2b53;
 
-            --main-color: var(--grey200);
-            --secondary-color: #ccf5ff;
+            --main-color: var(--grey700);
+            --secondary-color: var(--geut-blue);
 
-            --main-contrast-color: var(--grey200);
-            --action-color: var(--geut-green);
+            --main-contrast-color: var(--grey400);
+            --action-color: var(--geut-blue);
 
             font-size: 16px;
           }

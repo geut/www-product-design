@@ -12,6 +12,7 @@
   "keywords": [],
   "dependencies": {
     "@mapbox/rehype-prism": "^0.5.0",
+    "animejs": "^3.2.1",
     "elems": "^1.0.0-beta.15",
     "next": "^10.0.0",
     "nextein": "^3.0.0-beta.26",
@@ -23,6 +24,12 @@
     "rehype-slug": "^3.0.0"
   },
   "devDependencies": {
+    "eslint": "^7.13.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.21.5",
     "husky": "^4.3.0",
     "lint-staged": "^10.5.1",
     "prettier-standard": "^16.4.1"

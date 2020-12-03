@@ -5,7 +5,6 @@ import { Anchor } from 'elems'
 
 import Github from './icons/github'
 import Npm from './icons/npm'
-import Twitter from './icons/twitter'
 
 export default class Footer extends Component {
   render () {
@@ -42,15 +41,15 @@ export default class Footer extends Component {
         </div>
         <style jsx>{`
           footer {
-            ${gutter ? `padding: 0 calc(var(--spacing) * 4);` : ''}
+            ${gutter ? 'padding: 0 calc(var(--spacing) * 4);' : ''}
             padding-top: calc(var(--spacing) * 6);
             min-height: 30vh;
-            color: var(--grey400);
+            color: var(--grey500);
             justify-content: flex-end;
           }
 
           footer :global(svg) {
-            fill: var(--grey400);
+            fill: var(--grey500);
             margin: 0 var(--spacing);
           }
 

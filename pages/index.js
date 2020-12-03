@@ -1,14 +1,7 @@
 import React, { Component } from 'react'
 import withPosts from 'nextein/posts'
 
-import {
-  name,
-  url,
-  description,
-  npmName,
-  npm,
-  github
-} from '../site.json'
+import { name, url, description, npmName, npm, github } from '../site.json'
 import Meta from '../components/meta'
 import GEUTNavigation from '../components/geutnavigation'
 import Hero from '../components/hero'
@@ -42,11 +35,7 @@ class Index extends Component {
           <style jsx>{`
             .container {
               --main-contrast-color: var(--geut-main-color);
-              background: radial-gradient(
-                ellipse at 50% 0%,
-                var(--geut-blue),
-                var(--geut-purple)
-              );
+              background-color: var(--grey100);
             }
           `}</style>
         </div>

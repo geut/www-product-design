@@ -26,7 +26,7 @@ export default class Section extends Component {
           }
 
           .title :global(h2) {
-            font-family: var(--font-family-geut);
+            font-family: var(--font-family-montserrat);
             font-weight: lighter;
             margin: calc(var(--spacing) * 4) 0;
             color: var(--secondary-color);
