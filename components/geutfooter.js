@@ -66,7 +66,7 @@ const Footer = () => (
       }
 
       footer > .container > * {
-        max-width: 100%;
+        max-width: 100vw;
       }
 
       footer ul {
@@ -121,6 +121,12 @@ const Footer = () => (
 
       .text-center {
         text-align: center;
+      }
+      
+      @media screen and (max-width: 680px) {
+        footer > .container {
+          width: 100vw;
+        }
       }
     `}</style>
   </footer>

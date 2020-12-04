@@ -38,11 +38,15 @@ const Navigation = ({ top = true, ...props }) => (
         right: 0;
         width: 100vw;
         height: calc(var(--spacing) * 14);
+        display: flex;
+        background-color: var(--grey50);
       }
 
       nav ul {
-        background-color: var(--grey50);
-        padding: calc(var(--spacing) * 4) 0;
+        max-width: 72em;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -71,11 +75,16 @@ const Navigation = ({ top = true, ...props }) => (
         justify-content: space-between;
         align-items: flex-end;
         flex: 6 0 auto;
-        padding-left: calc(var(--spacing) * 4);
+        padding-left: calc(var(--spacing) * 8);
+      }
+      
+      .productLogo :global(svg > g > ellipse) {
+        fill: var(--geut-purple);
+        stroke: var(--geut-purple);
       }
 
       nav li.logo {
-        padding-right: calc(var(--spacing) * 4);
+        padding-right: calc(var(--spacing) * 8);
       }
 
       @media screen and (max-width: 680px) {

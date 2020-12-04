@@ -41,7 +41,7 @@ export default class Footer extends Component {
         </div>
         <style jsx>{`
           footer {
-            ${gutter ? 'padding: 0 calc(var(--spacing) * 4);' : ''}
+            ${gutter ? 'padding: 0 calc(var(--spacing) * 8);' : ''}
             padding-top: calc(var(--spacing) * 6);
             min-height: 30vh;
             color: var(--grey500);
