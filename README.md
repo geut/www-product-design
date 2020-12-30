@@ -29,7 +29,7 @@ Use the deploy button to create a Vercel Project
 
 # More information
 
-Built with [Nextein](https://nextein.elmasse.io).
+Built with [Nextein](https://nextein.elmasse.io). :star:
 
 - Check the [nextein repository](https://github.com/elmasse/nextein)
 - [Documentation](https://nextein.elmasse.io/docs)

@@ -1,19 +1,47 @@
 {
   "name": "www-product-design",
   "version": "1.0.0",
-  "description": "A nextein starter kit",
+  "description": "GEUT's Products Baseline",
   "private": true,
   "scripts": {
     "dev": "nextein",
     "export": "nextein build && nextein export",
-    "vercel-build": "npm run export"
+    "vercel-build": "npm run export",
+    "format": "prettier-standard --format"
   },
   "keywords": [],
   "dependencies": {
+    "@mapbox/rehype-prism": "^0.5.0",
+    "animejs": "^3.2.1",
     "elems": "^1.0.0-beta.15",
     "next": "^10.0.0",
     "nextein": "^3.0.0-beta.26",
+    "prismjs": "^1.16.0",
     "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react-dom": "^17.0.0",
+    "rehype-autolink-headings": "^4.0.0",
+    "rehype-minify-whitespace": "^4.0.5",
+    "rehype-slug": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.13.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.21.5",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.1",
+    "prettier-standard": "^16.4.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*": [
+      "prettier-standard --lint"
+    ]
   }
 }
